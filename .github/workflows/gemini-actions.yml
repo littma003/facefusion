@@ -1,0 +1,26 @@
+# .github/workflows/gemini-actions.yml
+
+name: Gemini CLI Actions
+
+on:
+  # 当有新的 Pull Request 或对已有 PR 推送新 commit 时触发
+  pull_request:
+    types: [opened, synchronize]
+
+  # 当在 Issue 或 Pull Request 中发表评论时触发
+  issue_comment:
+    types: [created]
+
+jobs:
+  gemini_job:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write       # 允许在 issue 中发表评论
+      pull-requests: write # 允许在 PR 中发表评论
+    steps:
+      - name: Run Gemini CLI Action
+        # 使用官方的 Gemini CLI Action
+        uses: google/gemini-cli-github-action@v0
+        with:
+          # 从 GitHub Secrets 中获取 API 密钥
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
