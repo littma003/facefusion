@@ -1,7 +1,7 @@
-gradio-rangeslider==0.0.8
 gradio==5.25.2
-numpy==2.2.4
-onnx==1.17.0
+gradio-rangeslider==0.0.8
+numpy==1.26.4
+onnx==1.18.0
 onnxruntime==1.22.0
 opencv-python==4.11.0.86
 psutil==7.0.0
