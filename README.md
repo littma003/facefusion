@@ -59,3 +59,5 @@ Documentation
 -------------
 
 Read the [documentation](https://docs.facefusion.io) for a deep dive.
+---
+Testing my new Gemini AI assistant!
